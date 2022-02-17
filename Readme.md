@@ -13,24 +13,24 @@
 - Base de Dados: "game-shop"
 
 - Tabela: "categorias"
-    id_categoria int()
-    nome_categoria|varchar(100)
+    * id_categoria int()
+    * nome_categoria|varchar(100)
 
 - Tabela: "clientes"
-    id_cliente int()
-    nome_cliente|varchar(30)
+    * id_cliente int()
+    * nome_cliente|varchar(30)
 
 - Tabela: "games"
-    id_game int()
-    nome_game|varchar(100)
-    preco decimal()
-    fk_idcategoria int()
+    * id_game int()
+    * nome_game|varchar(100)
+    * preco decimal()
+    * fk_idcategoria int()
 
 - Tabela: "pedidos"
-    id_pedido int()
-    fk_idcliente int(11)
-    fk_idgames int(11)
-    qtd int(11)
+    * id_pedido int()
+    * fk_idcliente int(11)
+    * fk_idgames int(11)
+    * qtd int(11)
 
 - Consulta avançada, exemplo:
     SELECT pedidos.id_pedido, clientes.nome_cliente, pedidos.qtd, games.nome_game, games.preco, categorias.nome_categoria FROM pedidos 
